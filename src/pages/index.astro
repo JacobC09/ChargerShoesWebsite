@@ -2,9 +2,9 @@
 import Navbar from "../components/Navbar.astro";
 import NavItem from "../components/NavItem.astro";
 import LandingPage from "../layouts/LandingPage.astro";
-import Header from "../components/Header.astro"
+import Header from "../components/Header.astro";
 import Main from "../layouts/Main.astro";
-import Split from "../layouts/Split.astro"
+import Split from "../layouts/Split.astro";
 import List from "../components/List.astro";
 import Footer from "../components/Footer.astro";
 import Sponsors from "../components/Sponsors.astro";
@@ -17,119 +17,164 @@ import Testimonial from "../components/Testimonial.astro";
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet">    
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
         <title>Charger Shoe Website</title>
     </head>
     <body>
         <Navbar>
-            <NavItem>
-                Home
-            </NavItem>
-            <NavItem>
-                About
-            </NavItem>
-            <NavItem>
-                Questions
-            </NavItem>
-            <NavItem>
-                Footer
-            </NavItem>
+            <NavItem text="Home" link="#landing-page">Home</NavItem>
+            <NavItem text="About" link="#About">About</NavItem>
+            <NavItem text="Questions" link="#Questions">Questions</NavItem>
+            <NavItem text="Reviews" link="#Reviews">Reviews</NavItem>
+            <NavItem text="Footer" link="#Footer">Footer</NavItem>
         </Navbar>
 
         <LandingPage />
         <Sponsors />
 
         <Main>
-            <Header title="Product Features" desc="Everything you need to know about charger shoes" />
+            <Header
+                id="About"
+                title="Product Features"
+                desc="Everything you need to know about charger shoes"
+            />
 
             <Split>
                 <h3 slot="left">Product Description</h3>
-                <p slot="left">Society has put up so many boundaries, so many limitations on what's right and wrong that it's almost impossible to get a pure thought out. It's like a little kid, a little boy, looking at colors, and no one told him what colors are good, before somebody tells you you shouldn't like pink because that's for girls, or you'd  two-year-old.
+                <p slot="left">
+                    Our product harnesses the power of the human body to
+                    generate electricity out of thin air. While you are engaged
+                    in any form of physical activity, our product uses the
+                    excess energy to charge a battery. You can then use this
+                    battery to charge anything you need including your phone,
+                    your laptop, your computer or even your watch.
                 </p>
-                
-                <List slot="left" items={[
-                    "Oil is a primary source of energy for various sectors, including transportation, industries, and residential use",
-                    "Oil is highly versatile and used in the production of a wide range of products. It serves as a raw material for manufacturing plastics",
-                    "Oil is a crucial source of petrochemicals, which are used in the production of plastics"
-                ]} />
-            
+
+                <List
+                    slot="left"
+                    items={[
+                        "This product is perfect for those who enjoy walking, jogging, running or are just out and about.",
+                        "The more active a person is, the more charging capacity their shoe will have.",
+                        "Very useful in emergency situations if your phone dies and you don't have access to an outlet.",
+                    ]}
+                />
+
                 <div class="img-display" slot="right">
                     <div class="img-container">
-                        <img src="image2.png">
+                        <img src="image2.png" />
                     </div>
                     <div class="split">
                         <div class="img-container">
-                            <img src="image1.jpg">
+                            <img src="image1.jpg" />
                         </div>
                         <div class="img-container">
-                            <img src="image3.jpg">
+                            <img src="image3.jpg" />
                         </div>
                     </div>
                 </div>
-
             </Split>
-            
-            <Header title="Faq" desc="Frequently Asked Questions" />
-            
+
+            <Header
+                id="Questions"
+                title="Faq"
+                desc="Frequently Asked Questions"
+            />
+
             <Split>
                 <div class="faq" slot="left">
-                    <Question question="What is a question?" answer="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis atque est in fuga asperiores provident, dignissimos debitis earum quas, magnam similique laborum, recusandae a sequi repellendus magni voluptas doloremque adipisci?" />
-                    <Question question="What is a question?" answer="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis atque est in fuga asperiores provident, dignissimos debitis earum quas, magnam similique laborum, recusandae a sequi repellendus magni voluptas doloremque adipisci?" />
-                    <Question question="What is a question?" answer="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis atque est in fuga asperiores provident, dignissimos debitis earum quas, magnam similique laborum, recusandae a sequi repellendus magni voluptas doloremque adipisci?" />
+                    <Question
+                        question="How much does it cost?"
+                        answer="Our product is relativly cheap and has a long life span. The price in which you purchase our product will affect it's quailty and efficiency."
+                    />
+                    <Question
+                        question="How long will it last?"
+                        answer="Depending on the model you purchase, our product can last for an extremely long time as it is manufactured and inspected to ensure high quality>"
+                    />
+                    <Question
+                        question="How much electricity is generated?"
+                        answer="The intensity of your exercise will determine how electricity is generated. "
+                    />
                 </div>
                 <div class="faq" slot="right">
-                    <Question question="What is a question?" answer="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis atque est in fuga asperiores provident, dignissimos debitis earum quas, magnam similique laborum, recusandae a sequi repellendus magni voluptas doloremque adipisci?" />
-                    <Question question="What is a question?" answer="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis atque est in fuga asperiores provident, dignissimos debitis earum quas, magnam similique laborum, recusandae a sequi repellendus magni voluptas doloremque adipisci?" />
-                    <Question question="What is a question?" answer="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis atque est in fuga asperiores provident, dignissimos debitis earum quas, magnam similique laborum, recusandae a sequi repellendus magni voluptas doloremque adipisci?" />
+                    <Question
+                        question="How do I install charger shoes into my shoe?"
+                        answer="Charger shoes can easily be inserted into any shoe you choose or you can buy our custom made shoes that have them pre-instaled>"
+                    />
+                    <Question
+                        question="Do they affect your ability to walk?"
+                        answer="Charger shoes are extremely light meaning you won't even notice that you have them installed."
+                    />
+                    <Question
+                        question="How old do you have to be to use one?"
+                        answer="You can use charger shoes at any age and for any level of daily activity."
+                    />
                 </div>
             </Split>
 
-            <Header title="Testimonials" desc="Everything you need to know about charger shoes" />
+            <Header
+                id="Reviews"
+                title="Testimonials"
+                desc="Everything you need to know about charger shoes"
+            />
 
             <div class="testimonials">
-                <Testimonial name="Sarah H." subtitle="@Sarah • January 26th, 2023" quote="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
-                <Testimonial name="Sarah H." subtitle="@Sarah • January 26th, 2023" quote="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
-                <Testimonial name="Sarah H." subtitle="@Sarah • January 26th, 2023" quote="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
+                <Testimonial
+                    name="Jake C."
+                    subtitle="@Sarah • January 26th, 2023"
+                    quote="Charger shoes where by far the best purchase I have ever made in my life. I never need to use any of my clunky chargers ever again. My electricy bill has never been so cheap since I bought these charger shoes. They are so easy to install, it took my less than a minute. 11/10"
+                />
+                <Testimonial
+                    name="Rabih R."
+                    subtitle="@Sarah • January 26th, 2023"
+                    quote="The Charger shoes have proven to be the most exceptional acquisition I have ever made in my lifetime. The necessity of utilizing any of my cumbersome chargers has become obsolete. Since acquiring these Charger shoes, my electricity expenses have significantly reduced. The installation process was remarkably effortless, requiring less than a minute of my time. The satisfaction I have derived from this purchase surpasses any rating scale, earning an extraordinary 11/10."
+                />
             </div>
-
         </Main>
 
         <Footer />
-
     </body>
 </html>
 
 <style is:global>
     :root {
         --primary: #2d6d2b;
-        --overlay-30: #F1EAE6;
-        --overlay-40: #E2D5CC;
-        --overlay-50: #D3C0B2;
-        --overlay-60: #BFA38E;
-        --overlay-70: #AA866B;
+        --overlay-30: #f1eae6;
+        --overlay-40: #e2d5cc;
+        --overlay-50: #d3c0b2;
+        --overlay-60: #bfa38e;
+        --overlay-70: #aa866b;
         --text: #64748b;
     }
-    
+
+    html {
+        scroll-behavior: smooth;
+
+    }
+
     body {
         margin: 0;
         padding: 0;
         overflow-x: hidden;
         width: 100vw;
-
     }
 
     * {
         box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
     }
 
     p {
         color: var(--text);
     }
-
 </style>
 
 <style>
@@ -139,7 +184,6 @@ import Testimonial from "../components/Testimonial.astro";
         display: grid;
         grid-template-rows: repeat(2, minmax(0, 1fr));
         gap: 1rem;
-
     }
 
     .img-display .split {
@@ -175,5 +219,4 @@ import Testimonial from "../components/Testimonial.astro";
         gap: 4rem;
         margin-bottom: 6rem;
     }
-
 </style>

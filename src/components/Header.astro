@@ -1,13 +1,17 @@
 ---
-const { title, desc } = Astro.props;
+const { title, desc, id="" } = Astro.props;
 ---
 
-<div class="header">
+<div class="header" id={id}>
     <h1>{title}</h1>
     <p>{desc}</p>
 </div>
 
 <style>
+    h1 {
+        color: var(--primary);
+    }
+
     h1, p {
         text-align: center;
     }
