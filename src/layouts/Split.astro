@@ -1,0 +1,21 @@
+<div class="split">
+    <div class="left">
+        <slot name="left" />
+    </div>
+    <div class="right">
+        <slot name="right" />
+    </div>
+</div>
+
+<style>
+    .split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin: 4rem;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+</style>

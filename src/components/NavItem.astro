@@ -1,0 +1,35 @@
+<p class="nav-item">
+    <slot />
+</p>
+
+<style>
+    p {
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+        color: black;
+    }
+
+    p:hover {
+        color: var(--primary);
+    }
+
+    p::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        max-width: 0;
+        height: 3px;
+        background-color: var(--primary);
+        bottom: -6px;
+        left: 0;
+        transition: 200ms ease;
+        opacity: 0;
+    }
+
+    p:hover::after {
+        opacity: 1;
+        max-width: 100%;
+    }
+
+</style>

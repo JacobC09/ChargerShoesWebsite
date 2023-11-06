@@ -1,0 +1,179 @@
+---
+import Navbar from "../components/Navbar.astro";
+import NavItem from "../components/NavItem.astro";
+import LandingPage from "../layouts/LandingPage.astro";
+import Header from "../components/Header.astro"
+import Main from "../layouts/Main.astro";
+import Split from "../layouts/Split.astro"
+import List from "../components/List.astro";
+import Footer from "../components/Footer.astro";
+import Sponsors from "../components/Sponsors.astro";
+import Question from "../components/Question.astro";
+import Testimonial from "../components/Testimonial.astro";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet">    
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <title>Charger Shoe Website</title>
+    </head>
+    <body>
+        <Navbar>
+            <NavItem>
+                Home
+            </NavItem>
+            <NavItem>
+                About
+            </NavItem>
+            <NavItem>
+                Questions
+            </NavItem>
+            <NavItem>
+                Footer
+            </NavItem>
+        </Navbar>
+
+        <LandingPage />
+        <Sponsors />
+
+        <Main>
+            <Header title="Product Features" desc="Everything you need to know about charger shoes" />
+
+            <Split>
+                <h3 slot="left">Product Description</h3>
+                <p slot="left">Society has put up so many boundaries, so many limitations on what's right and wrong that it's almost impossible to get a pure thought out. It's like a little kid, a little boy, looking at colors, and no one told him what colors are good, before somebody tells you you shouldn't like pink because that's for girls, or you'd  two-year-old.
+                </p>
+                
+                <List slot="left" items={[
+                    "Oil is a primary source of energy for various sectors, including transportation, industries, and residential use",
+                    "Oil is highly versatile and used in the production of a wide range of products. It serves as a raw material for manufacturing plastics",
+                    "Oil is a crucial source of petrochemicals, which are used in the production of plastics"
+                ]} />
+            
+                <div class="img-display" slot="right">
+                    <div class="img-container">
+                        <img src="image2.png">
+                    </div>
+                    <div class="split">
+                        <div class="img-container">
+                            <img src="image1.jpg">
+                        </div>
+                        <div class="img-container">
+                            <img src="image3.jpg">
+                        </div>
+                    </div>
+                </div>
+
+            </Split>
+            
+            <Header title="Faq" desc="Frequently Asked Questions" />
+            
+            <Split>
+                <div class="faq" slot="left">
+                    <Question question="What is a question?" answer="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis atque est in fuga asperiores provident, dignissimos debitis earum quas, magnam similique laborum, recusandae a sequi repellendus magni voluptas doloremque adipisci?" />
+                    <Question question="What is a question?" answer="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis atque est in fuga asperiores provident, dignissimos debitis earum quas, magnam similique laborum, recusandae a sequi repellendus magni voluptas doloremque adipisci?" />
+                    <Question question="What is a question?" answer="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis atque est in fuga asperiores provident, dignissimos debitis earum quas, magnam similique laborum, recusandae a sequi repellendus magni voluptas doloremque adipisci?" />
+                </div>
+                <div class="faq" slot="right">
+                    <Question question="What is a question?" answer="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis atque est in fuga asperiores provident, dignissimos debitis earum quas, magnam similique laborum, recusandae a sequi repellendus magni voluptas doloremque adipisci?" />
+                    <Question question="What is a question?" answer="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis atque est in fuga asperiores provident, dignissimos debitis earum quas, magnam similique laborum, recusandae a sequi repellendus magni voluptas doloremque adipisci?" />
+                    <Question question="What is a question?" answer="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis atque est in fuga asperiores provident, dignissimos debitis earum quas, magnam similique laborum, recusandae a sequi repellendus magni voluptas doloremque adipisci?" />
+                </div>
+            </Split>
+
+            <Header title="Testimonials" desc="Everything you need to know about charger shoes" />
+
+            <div class="testimonials">
+                <Testimonial name="Sarah H." subtitle="@Sarah • January 26th, 2023" quote="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
+                <Testimonial name="Sarah H." subtitle="@Sarah • January 26th, 2023" quote="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
+                <Testimonial name="Sarah H." subtitle="@Sarah • January 26th, 2023" quote="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
+            </div>
+
+        </Main>
+
+        <Footer />
+
+    </body>
+</html>
+
+<style is:global>
+    :root {
+        --primary: #2d6d2b;
+        --overlay-30: #F1EAE6;
+        --overlay-40: #E2D5CC;
+        --overlay-50: #D3C0B2;
+        --overlay-60: #BFA38E;
+        --overlay-70: #AA866B;
+        --text: #64748b;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        width: 100vw;
+
+    }
+
+    * {
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    p {
+        color: var(--text);
+    }
+
+</style>
+
+<style>
+    .img-display {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+
+    }
+
+    .img-display .split {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .img-container {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        border-radius: 0.75rem;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .img-container img {
+        object-fit: cover;
+        max-height: 200px;
+        min-width: 100%;
+    }
+
+    .faq {
+        display: grid;
+        gap: 2rem;
+    }
+
+    .testimonials {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        margin-bottom: 6rem;
+    }
+
+</style>

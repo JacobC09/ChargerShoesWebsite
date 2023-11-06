@@ -1,0 +1,51 @@
+---
+const { clickEvent } = Astro.props;
+---
+
+<button onclick={clickEvent} class="button">
+    <div>
+        <slot />
+    </div>
+    <span class="material-symbols-outlined">
+        arrow_forward
+    </span>
+</button>
+
+<style>
+    button {
+        border: 2px solid var(--primary);
+        inset: 0;
+        outline: none;
+        padding: 0.8rem 1.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background: none;
+        color: var(--primary);
+        cursor: pointer;
+    }
+
+    button:hover div {
+        transform: translateX(-0.8rem);
+    }
+
+    button:hover span {
+        opacity: 1;
+        transform: none;
+        scale: 80%;
+    }
+
+    div {
+        display: inline;
+        transition: ease 300ms;
+    }
+
+    span {
+        position: absolute;
+        right: 0.7rem;
+        transition: ease 300ms;
+        opacity: 0;
+        transform: translateY(0.4rem);
+    }
+</style>

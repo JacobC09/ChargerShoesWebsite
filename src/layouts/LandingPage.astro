@@ -1,0 +1,61 @@
+---
+import Button from "../components/Button.astro";
+---
+
+<div class="landing-page">
+    <div class="left">
+        <h3 class="pre-title">ECO-FRIENDLY / AFFORDABLE</h2>
+        <h1 class="title"><span>Charger</span> Shoes</h1>
+        <p class="desc">An simple, affordable, and eco-friendly way to charge recharge your electronics powered by daily living</p>
+        <Button>Learn More</Button>
+    </div>
+    <img src="shoe.png" alt="shoe">
+</div>
+
+<style>
+    .landing-page {
+        min-width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10vw;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .left {
+        margin-bottom: 8em;
+    }
+
+    .pre-title {
+        margin: 0;
+        font-weight: 400;
+
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 6em;
+        margin: 0;
+    }
+
+    .title span {
+        color: var(--primary);
+    }
+
+    .desc {
+        margin: 1em 0;
+        color: black;
+    }
+
+    img {
+        position: absolute;
+        right: 5vw;
+        height: 60vh;
+        transform: rotate(-40deg);
+        filter: drop-shadow(40px 120px 20px rgba(0, 0, 0, .4));
+        user-select: none;
+    }
+
+</style>

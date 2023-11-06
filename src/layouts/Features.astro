@@ -1,0 +1,23 @@
+---
+const { title, desc, features } = Astro.props;
+---
+
+<div class="features">
+    <h2>{title}</h2>
+    <p>{desc}</p>
+    <div class="items">
+        {features.map((feature) => {
+            return (
+                <div class="item">
+                    <span class="material-symbols-outlined">
+                        {feature.icon}
+                    </span>
+                    <div class="item-text">
+                        <p class="item-title">{features.title}</p>    
+                        <p class="item-desc">{features.desc}</p>    
+                    </div>
+                </div>
+            );
+        })}
+    </div>
+</div>

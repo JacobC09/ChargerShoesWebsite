@@ -1,0 +1,56 @@
+---
+
+---
+
+<nav>
+    <img src="icon.png" alt="charger-shoes">
+    <div class="items">
+        <slot />
+    </div>
+</nav>
+
+<script>
+    const nav = document.querySelector("nav");
+
+    const updateShadow = () => {
+        if (window.scrollY > 0) {
+            nav.classList.add("shadow");
+        } else {
+            nav.classList.remove("shadow");
+        }
+    }
+
+    window.addEventListener("scroll", updateShadow);
+</script>
+
+<style>
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 1.5rem 12vw;
+        background-color: white;
+        z-index: 1;
+    }
+
+    nav.shadow {
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    }
+
+    img {
+        width: 40px;
+        position: absolute;
+        left: 4vw;
+    }
+
+    .items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+</style>
